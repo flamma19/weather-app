@@ -2,74 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Building a Weather Aap</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="app.js"></script>
+    <script src="app.js" defer ></script>
 </head>
 <body>
-    <div class="weather-app">
-        <div class="container">
-            <div>
-                <h1 class="temp">16&#176;</h1>
-                <div class="city-time">
-                    <h1 class="name">London</h1>
-                    <small>
-                        <span class="time">06:09</span>
-                        -
-                        <span class="date">
-                            Monday Sep 19
-                        </span>
-                    </small>
-                </div>
-                <div class="weather">
-                    <img
-                            src="unknown.png"
-                            class="icon"
-                            alt="icon"
-                            width="50px"
-                            height="50px"
-                    />
-                    <span class="condition">cloudy</span>
-                </div>
-            </div>
-        </div>
-        <div class="panel">
-            <form id="locationInput">
-                <input
-                        type="text"
-                        class="search"
-                        placeholder="Search location..."
-                />
-                <button type="submit" class="submit">
-                    <i class="material-symbols-outlined">
-                        search
-                    </i>
-                </button>
-            </form>
-            <ul class="cities">
-                <li class="city">New York</li>
-                <li class="city">California</li>
-                <li class="city">Paris</li>
-                <li class="city">Tokyo</li>
-            </ul>
-            <ul class="details">
-                <h4>Weather Details</h4>
-                <li>
-                    <span>Cloudy</span>
-                    <span class="cloud">89%</span>
-                </li>
-                <li>
-                    <span>Humidity</span>
-                    <span class="humidity">64%</span>
-                </li>
-                <li>
-                    <span>Wind</span>
-                    <span class="wind">8 Km/h</span>
-                </li>
-            </ul>
-        </div>
+  <div class="container" data-tilt>
+    <div class="app-title">
+      <p>Weather</p>
     </div>
+    <div class="notification"></div>
+    <div class="weather-container">
+      <div class="weather-icon">
+        <img src="unknown.png" alt="">
+      </div>
+      <div class="temperature-value">
+          <p>--°<span>C</span></p>
+      </div>
+      <div class="temperature-description">
+          <p>--</p>
+      </div>
+      <div class="location">
+          <p>--</p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
 </html>
