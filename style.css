@@ -60,22 +60,38 @@ body {
 }
 .search-container {
   font-size: 1em;
-  display: grid;
-  grid-template-columns: 9fr 3fr;
   gap: 1.25em;
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  column-gap: 0.5em;
+  width:100%;
 }
+
 .search-container input,
 .search-container button {
   outline: none;
-  font-size: 1em;
+  width:50%;
+  cursor: pointer;
   border: none;
 }
+
+.search-container button {
+  font-size: 0.5em;
+  width: 20%;
+}
+
 .search-container input {
   padding: 0.7em;
   background-color: transparent;
   border-bottom: 2px solid var(--transp-white-1);
   color: var(--white);
   font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+  width: 75%;
+
 }
 .search-container input::placeholder {
   color: var(--off-white);
@@ -86,7 +102,7 @@ body {
 .search-container button {
   color: var(--blue-2);
   background-color: var(--white);
-  border-radius: 0.3em;
+  border-radius: 0.5em;
 }
 #result h2 {
   color: var(--white);

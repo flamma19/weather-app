@@ -10,6 +10,8 @@
     />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
     <div class="wrapper">
@@ -17,20 +19,21 @@
       <div class="shape shape-2"></div>-->
       <div class="container" data-tilt>
         <div class="search-container">
+          <button id="location"><span class="material-symbols-outlined">my_location</span></button>
           <input
             type="text"
             placeholder="Enter a city name"
             id="city"
             value="Tehran"
           />
-          <button id="search-btn">Search</button>
+          <button id="search-btn"><span class="material-symbols-outlined">travel_explore</span></button>
         </div>
         <div id="result"></div>
       </div>
     </div>
     <!-- Script -->
     <script src="key.js"></script>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
     <script src="vanilla-tilt.js" defer ></script>
   </body>
 </html>
