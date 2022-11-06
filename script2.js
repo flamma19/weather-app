@@ -2,6 +2,7 @@ let result = document.getElementById("result");
 let searchBtn = document.getElementById("search-btn");
 let cityRef = document.getElementById("city");
 let locationBtn = document.getElementById("location");
+let bodyElement = document.getElementById("body");
 
 //Function to fetch weather details from api and display them
 let getWeather = () => {
@@ -26,6 +27,18 @@ let getWeather = () => {
         console.log(data.name);
         console.log(data.main.temp_min);
         console.log(data.main.temp_max);
+        let getImage = (value) => {
+          let url = `https://api.unsplash.com/photos/random?query=${value}&orientation=landscape&client_id=2PbBMo8LkFEoRS60nEOvLvDg5PvCZPRQ9HRfrpek5JY`
+          fetch(url)
+              .then((resp) => resp.json())
+              //If city name is valid
+              .then((data) => {
+                  //console.log(data);
+                  console.log(data.urls.regular);
+                  imageAdd = data.urls.regular;
+                  bodyElement.style.backgroundImage = `url(${imageAdd})`;
+              })
+      }
         result.innerHTML = `
         <h2>${data.name}</h2>
         <h4 class="weather">${data.weather[0].main}</h4>
@@ -43,7 +56,9 @@ let getWeather = () => {
             </div>
         </div>
         `;
+        getImage(data.weather[0].description);
       })
+      
       //If city name is NOT valid
       .catch(() => {
         result.innerHTML = `<h3 class="msg">City not found</h3>`;

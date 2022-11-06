@@ -12,11 +12,15 @@
   --blue-1: #62b8f5;
   --blue-2: #4475ef;
   --shadow: rgba(3, 46, 87, 0.2);
+  --grey: #3b3b3b;
+  --transp-grey-1: rgba(59,59,59,0.25);
+  --off-grey:rgb(31, 31, 31);
 }
 body {
   height: 100vh;
   /*background: linear-gradient(135deg, var(--blue-1), var(--blue-2));*/
-  background-image: url('cloudy.jpg');
+  background-image: url("https://images.unsplash.com/photo-1613578699399-82ae71be53a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNzgyMDR8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc2ODAzNjE&ixlib=rb-4.0.3&q=80&w=1080"
+  );
   background-position: center;
   background-size: cover;
 }
@@ -32,7 +36,7 @@ body {
 .container {
   width: 100%;
   background: var(--transp-white-2);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   padding: 3em 1.8em;
   border: 2px solid var(--transp-white-2);
   border-radius: 0.6em;
@@ -85,8 +89,8 @@ body {
 .search-container input {
   padding: 0.7em;
   background-color: transparent;
-  border-bottom: 2px solid var(--transp-white-1);
-  color: var(--white);
+  border-bottom: 2px solid var(--transp-grey-1);
+  color: var(--grey);
   font-weight: 300;
   font-size: 1em;
   text-align: center;
@@ -94,26 +98,35 @@ body {
 
 }
 .search-container input::placeholder {
-  color: var(--off-white);
+  color: var(--grey);
 }
 .search-container input:focus {
-  border-color: var(--white);
+  border-color: var(--grey);
 }
 .search-container button {
-  color: var(--blue-2);
+  color: var(--grey);
   background-color: var(--white);
   border-radius: 0.5em;
 }
 #result h2 {
-  color: var(--white);
+  color: var(--grey);
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-weight: 600;
   margin: 1.25em 0;
 }
+
+#result h2 {
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  margin: 1.25em 0;
+}
+
 .weather,
 .desc {
-  color: var(--off-white);
+  color: var(--off-grey);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.9em;
@@ -133,7 +146,7 @@ body {
   margin: 0.3em 0 0.7em 0;
   line-height: 0;
   font-weight: 400;
-  color: var(--white);
+  color: var(--grey);
 }
 .temp-container {
   display: flex;
@@ -147,11 +160,11 @@ body {
 }
 .temp-container .title {
   font-weight: 600;
-  color: var(--white);
+  color: var(--grey);
 }
 .temp-container .temp {
   font-weight: 300;
-  color: var(--off-white);
+  color: var(--off-grey);
 }
 .msg {
   margin-top: 1.8em;
