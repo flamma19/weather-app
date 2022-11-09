@@ -8,7 +8,8 @@ features:
 - [x] change background based on weather description.
 - [x] glassmorphism effect.
 - [ ] use animated icons.
-- [ ] find a better search term for background image search. 
+- [ ] find a better search term for background image search. ( based on Weather condition now. )
 - [ ] make a box for alerts and errors.
+- [ ] animating  buttons.
 - [ ] make it responsive.
 - [ ] cleaning code.
